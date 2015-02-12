@@ -13,8 +13,10 @@ in the local directory.
 
 ## INSTALLATION
 
+```bash
 $ chmod +x proxy.js
 $ mv proxy.js /usr/local/bin/proxy
+```
 
 ## USAGE
 
