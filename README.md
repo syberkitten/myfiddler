@@ -14,6 +14,7 @@ in the local directory.
 ## INSTALLATION
 
 ```bash
+$ npm install -g
 $ chmod +x proxy.js
 $ mv proxy.js /usr/local/bin/proxy
 ```
