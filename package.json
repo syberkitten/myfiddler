@@ -2,7 +2,7 @@
   "name": "node-proxy-filter",
   "version": "0.1.0",
   "description": "A Node.JS proxy server for injecting local resources on remote websites",
-  "main": "proxy.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,11 @@
     "url": "https://github.com/kostasx/node-proxy-filter.git"
   },
   "author": "KostasX",
-  "license": "ISC",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "nproxy": "./bin/nproxy"
+  },
   "bugs": {
     "url": "https://github.com/kostasx/node-proxy-filter/issues"
   },

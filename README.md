@@ -14,15 +14,13 @@ in the local directory.
 ## INSTALLATION
 
 ```bash
-$ npm install -g
-$ chmod +x proxy.js
-$ mv proxy.js /usr/local/bin/proxy
+$ sudo npm install -g
 ```
 
 ## USAGE
 
 ```bash
-$ proxy
+$ nproxy
 ```
 
 The above command will start a proxy server on port 8080.
@@ -30,7 +28,7 @@ When the user visits a site via this proxy server, the script will replace
 all the remote requested files with the ones found in the local directory.
 
 ```
-$ proxy jquery.js
+$ nproxy jquery.js
 ```
 
 In the above command we specify the files we want our proxy server 
