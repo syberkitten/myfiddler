@@ -36,4 +36,6 @@ to look for in the requests and replace them. These files must reside
 in the current directory.
 
 ## TO DO
+
 * Implement HTTPS
+* Investigate `getaddrinfo ENOTFOUND` and `connect ECONNREFUSED` errors
