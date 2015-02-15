@@ -51,6 +51,12 @@
     var reqUrl = path.basename(req.url).split("?");
         reqUrl = reqUrl[0];
 
+    if ( process.argv.length < 3 ){
+
+      files = fs.readdirSync(currentDir);
+
+    }
+
     if ( files.indexOf(reqUrl) > -1 ){
 
       console.log("Filename matched: " + reqUrl );
