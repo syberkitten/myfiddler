@@ -48,9 +48,13 @@
 
   var server = http.createServer(function(req, res) {
 
-    if ( files.indexOf(path.basename(req.url)) > -1 ){
+    var reqUrl = path.basename(req.url).split("?");
+        reqUrl = reqUrl[0];
 
-      req.url = localhost + path.basename( req.url );
+    if ( files.indexOf(reqUrl) > -1 ){
+
+      console.log("Filename matched: " + reqUrl );
+      req.url = localhost + reqUrl;
       target  = localhost;
 
     } else {
