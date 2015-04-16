@@ -1,3 +1,5 @@
+[![npm downloads per month](http://img.shields.io/npm/dm/node-proxy-filter.svg)](https://www.npmjs.org/package/node-proxy-filter)
+
 # node-proxy-filter
 A Node.JS proxy server for injecting local resources on remote websites. 
 
