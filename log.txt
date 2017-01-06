@@ -1,0 +1,539 @@
+HTTP PROXY SERVER LISTENING ON PORT: 8080
+LOCAL STATIC HTTP SERVER SERVING ON PORT: 9001
+reqUrl: dps
+headers: { host: 'px.dynamicyield.com',
+  'proxy-connection': 'keep-alive',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://px.dynamicyield.com
+reqUrl: 2878432
+headers: { host: 'vod.walla.co.il',
+  'proxy-connection': 'keep-alive',
+  'cache-control': 'max-age=0',
+  'upgrade-insecure-requests': '1',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  referer: 'http://vod.walla.co.il/movie/2577735',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2',
+  cookie: 'cdPageLoadId=1483727265832127; cd_user_id=158bf2901e233a-022d448859a7d4-1d376c52-fa000-158bf2901e3540; adblockerfound=true; textsize=NaN; Seg=Age%3D%26Gender%3D%26Content%3D0%26Video%3D0%26Adtoma%3D0%26MusicParameter%3D1; tuid=22095612755128; _dyid=-3566850692958621279; _dyfs=true; _cb_ls=1; cdPageLoadId=1483726600564609; _gat=1; __utmt=1; _dy_csc_ses=t; _dy_ses_load_seq=76460%3A1483727263247; _dy_c_exps=; _dy_soct=12898.15511.1483727263*95471.130029.1483727263; __utma=183361440.1836450516.1480675885.1483718927.1483726574.4; __utmb=183361440.9.10.1483726575; __utmc=183361440; __utmz=183361440.1483726575.4.3.utmcsr=cars.walla.co.il|utmccn=(referral)|utmcmd=referral|utmcct=/version/522; _ga=GA1.4.1836450516.1480675885; _dycst=dk.m.c.ss.frv3.ltos.; _dy_geo=IL.AS.IL_05.IL_05_Bat%20Yam; _dy_df_geo=Israel..Bat%20Yam; _dy_toffset=-1; _dyus_8765945=698%7C0%7C0%7C0%7C0%7C0.0.1480675889419.1483727264575.3051375.0%7C5%7C1%7C0%7C1161%7C10%7C0%7C0%7C0%7C0%7C0%7C0%7C10%7C0%7C0%7C1%7C0%7C3%7C10%7C4%7C0%7C0%7C0%7C0; _cb=B6xtniCOTPARDJvdyL; _chartbeat2=.1483726585593.1483727269923.1.C52odv4zGdxyhwMB_O8id07JEy; _cb_svref=http%3A%2F%2Fcars.walla.co.il%2Fversion%2F522' }
+target:
+http://vod.walla.co.il
+reqUrl: api_dynamic.js
+headers: { host: 'dy.wcdn.co.il',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2',
+  'if-none-match': '"211be12dbe9681ab5aff9f5c231fd923"',
+  'if-modified-since': 'Wed, 04 Jan 2017 12:08:27 GMT' }
+target:
+http://dy.wcdn.co.il
+reqUrl: api_static.js
+headers: { host: 'dy.wcdn.co.il',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2',
+  'if-none-match': '"161feb8f364f756ccdc8134d4bd0b0df"',
+  'if-modified-since': 'Wed, 04 Jan 2017 12:08:27 GMT' }
+target:
+http://dy.wcdn.co.il
+reqUrl: st
+headers: { host: 'st.dynamicyield.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2',
+  cookie: 'DYID=-3566850692958621279; DYSES=175bbbc67b8be688c90bbd7b7b0b126e' }
+target:
+http://st.dynamicyield.com
+reqUrl: track
+headers: { host: 'api.cooladata.com',
+  'proxy-connection': 'keep-alive',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://api.cooladata.com
+reqUrl: info
+headers: { host: '192.118.82.227',
+  'proxy-connection': 'keep-alive',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://192.118.82.227
+reqUrl: 
+headers: { host: 'a.vod.ch10.cloudvideoplatform.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94',
+  origin: 'http://10tv.nana10.co.il',
+  accept: '*/*',
+  referer: 'http://10tv.nana10.co.il/Video/?VideoID=225966&TypeID=13&SectionID=13178&CategoryID=600313&pid=48&AutoPlay=1',
+  'accept-encoding': 'gzip, deflate, lzma, sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  cookie: 'io=xVCj9Flo6lysVUQzAxlL' }
+target:
+http://a.vod.ch10.cloudvideoplatform.com
+reqUrl: 
+headers: { host: 'a.vod.ch10.cloudvideoplatform.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94',
+  origin: 'http://10tv.nana10.co.il',
+  accept: '*/*',
+  referer: 'http://10tv.nana10.co.il/Video/?VideoID=225966&TypeID=13&SectionID=13178&CategoryID=600313&pid=48&AutoPlay=1',
+  'accept-encoding': 'gzip, deflate, lzma, sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  cookie: 'io=hxXBg5XrB6hfIydlAxm2' }
+target:
+http://a.vod.ch10.cloudvideoplatform.com
+reqUrl: 
+headers: { host: 'a.vod.ch10.cloudvideoplatform.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94',
+  origin: 'http://10tv.nana10.co.il',
+  accept: '*/*',
+  referer: 'http://10tv.nana10.co.il/Video/?VideoID=225966&TypeID=13&SectionID=13178&CategoryID=600313&pid=48&AutoPlay=1',
+  'accept-encoding': 'gzip, deflate, lzma, sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  cookie: 'io=hxXBg5XrB6hfIydlAxm2' }
+target:
+http://a.vod.ch10.cloudvideoplatform.com
+reqUrl: track
+headers: { host: 'api.cooladata.com',
+  'proxy-connection': 'keep-alive',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://api.cooladata.com
+reqUrl: 518&files[42][filename]=1951879-42.mp4&files[62][filename]=1951879-62.mp4&files[63][filename]=1951879-63.mp4&files[65][filename]=1951879-65.mp4&files[66][filename]=1951879-66.mp4&files[68][filename]=1951879-68.mp4
+headers: { host: 'walla-metadata-rr-d.vidnt.com',
+  'proxy-connection': 'keep-alive',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://walla-metadata-rr-d.vidnt.com
+reqUrl: track
+headers: { host: 'api.cooladata.com',
+  'proxy-connection': 'keep-alive',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://api.cooladata.com
+reqUrl: 3797268298
+headers: { host: 'fus.walla.co.il',
+  'proxy-connection': 'keep-alive',
+  accept: '*/*',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://fus.walla.co.il
+reqUrl: uia
+headers: { host: 'px.dynamicyield.com',
+  'proxy-connection': 'keep-alive',
+  'content-length': '1152',
+  accept: '*/*',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  'content-type': 'application/x-www-form-urlencoded',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://px.dynamicyield.com
+reqUrl: var
+headers: { host: 'px.dynamicyield.com',
+  'proxy-connection': 'keep-alive',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://px.dynamicyield.com
+reqUrl: track
+headers: { host: 'api.cooladata.com',
+  'proxy-connection': 'keep-alive',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://api.cooladata.com
+reqUrl: track
+headers: { host: 'api.cooladata.com',
+  'proxy-connection': 'keep-alive',
+  'content-length': '2205',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  'content-type': 'application/x-www-form-urlencoded',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://api.cooladata.com
+reqUrl: track
+headers: { host: 'api.cooladata.com',
+  'proxy-connection': 'keep-alive',
+  'content-length': '2211',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  'content-type': 'application/x-www-form-urlencoded',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://api.cooladata.com
+reqUrl: EventsVideoLive.asp
+headers: { host: 'events.walla.co.il',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: 'image/webp,image/*,*/*;q=0.8',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2',
+  cookie: 'cd_user_id=158bf2901e233a-022d448859a7d4-1d376c52-fa000-158bf2901e3540; adblockerfound=true; textsize=NaN; Seg=Age%3D%26Gender%3D%26Content%3D0%26Video%3D0%26Adtoma%3D0%26MusicParameter%3D1; tuid=22095612755128; ASPSESSIONIDASTQSQDS=IJJPKEEDPNMEILJCLADAKBEM; _dyid=-3566850692958621279; _dyfs=true; __utmt=1; ASPSESSIONIDSSRRSRCS=NEIOOHEDFNNFHJDKJBJFLGKE; _dy_csc_ses=t; _dy_ses_load_seq=76460%3A1483727436272; _dy_c_exps=; _dy_soct=12898.15511.1483727436*95471.130029.1483727436; __utma=183361440.1836450516.1480675885.1483718927.1483726574.4; __utmb=183361440.10.10.1483726575; __utmc=183361440; __utmz=183361440.1483726575.4.3.utmcsr=cars.walla.co.il|utmccn=(referral)|utmcmd=referral|utmcct=/version/522; _dycst=dk.m.c.ss.frv4.ltos.; _dy_geo=IL.AS.IL_05.IL_05_Bat%20Yam; _dy_df_geo=Israel..Bat%20Yam; _dy_toffset=-1; _dyus_8765945=708%7C0%7C0%7C0%7C0%7C0.0.1480675889419.1483727437678.3051548.0%7C5%7C1%7C0%7C1161%7C11%7C0%7C0%7C0%7C0%7C0%7C0%7C11%7C0%7C0%7C1%7C0%7C3%7C11%7C4%7C0%7C0%7C0%7C0' }
+target:
+http://events.walla.co.il
+reqUrl: crossdomain.xml
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: playlist.m3u8
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: chunklist_w289420529_b1327968.m3u8
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: chunklist_w289420529_b927993.m3u8
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: chunklist_w289420529_b639968.m3u8
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: chunklist_w289420529_b627993.m3u8
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: chunklist_w289420529_b527968.m3u8
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: chunklist_w289420529_b314171.m3u8
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: media_w289420529_b1327968_0.ts
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: 3926327975
+headers: { host: 'fus.walla.co.il',
+  'proxy-connection': 'keep-alive',
+  accept: '*/*',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://fus.walla.co.il
+reqUrl: track
+headers: { host: 'api.cooladata.com',
+  'proxy-connection': 'keep-alive',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://api.cooladata.com
+reqUrl: track
+headers: { host: 'api.cooladata.com',
+  'proxy-connection': 'keep-alive',
+  'content-length': '2204',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  'content-type': 'application/x-www-form-urlencoded',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://api.cooladata.com
+reqUrl: EventsVideoLive.asp
+headers: { host: 'events.walla.co.il',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: 'image/webp,image/*,*/*;q=0.8',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2',
+  cookie: 'cd_user_id=158bf2901e233a-022d448859a7d4-1d376c52-fa000-158bf2901e3540; adblockerfound=true; textsize=NaN; Seg=Age%3D%26Gender%3D%26Content%3D0%26Video%3D0%26Adtoma%3D0%26MusicParameter%3D1; tuid=22095612755128; ASPSESSIONIDASTQSQDS=IJJPKEEDPNMEILJCLADAKBEM; _dyid=-3566850692958621279; _dyfs=true; __utmt=1; ASPSESSIONIDSSRRSRCS=NEIOOHEDFNNFHJDKJBJFLGKE; _dy_csc_ses=t; _dy_ses_load_seq=76460%3A1483727436272; _dy_c_exps=; _dy_soct=12898.15511.1483727436*95471.130029.1483727436; __utma=183361440.1836450516.1480675885.1483718927.1483726574.4; __utmb=183361440.10.10.1483726575; __utmc=183361440; __utmz=183361440.1483726575.4.3.utmcsr=cars.walla.co.il|utmccn=(referral)|utmcmd=referral|utmcct=/version/522; _dycst=dk.m.c.ss.frv4.ltos.; _dy_geo=IL.AS.IL_05.IL_05_Bat%20Yam; _dy_df_geo=Israel..Bat%20Yam; _dy_toffset=-1; _dyus_8765945=708%7C0%7C0%7C0%7C0%7C0.0.1480675889419.1483727437678.3051548.0%7C5%7C1%7C0%7C1161%7C11%7C0%7C0%7C0%7C0%7C0%7C0%7C11%7C0%7C0%7C1%7C0%7C3%7C11%7C4%7C0%7C0%7C0%7C0' }
+target:
+http://events.walla.co.il
+reqUrl: ping.gif
+headers: { host: 'jwpltx.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: 'image/webp,image/*,*/*;q=0.8',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://jwpltx.com
+reqUrl: media_w289420529_b1327968_1.ts
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: ping.gif
+headers: { host: 'jwpltx.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: 'image/webp,image/*,*/*;q=0.8',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://jwpltx.com
+reqUrl: \qCategoryID=600313&WIDTH=1280&HEIGHT=728&WIDTH_RANGE=WR_E&DATE=20170106&HOUR=20&OS=MAC&JE=0&UL=en&RES=RS14&RESW=1280&RESH=800&ORD=6909268259436689&req=fr&tag=ajx&place_holders=Plazma_720x300,1,PrimeInboard_780X440,1,Mainstrip_780x150,1,Top_780x150,1,Top_780x90,1,Top_728x90,1,Top_360x90,1&&MASA_Age=0&CG=0&MASA_DayOfMonth=6&MASA_MonthOfYear=1&MASA_Refresh_Phase=64&MASA_ServiceBrowsingHistory=120,126,169
+headers: { host: 'nana10.checkm8.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94',
+  accept: '*/*',
+  referer: 'http://10tv.nana10.co.il/Category/?CategoryID=600313',
+  'accept-encoding': 'gzip, deflate, lzma, sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  cookie: 'dt=101,20170106161940,&OS=MAC&JE=0&UL=en&RES=RS14&RESW=1280&RESH=800&CE=1483719579; N=k26JO7zb9UChGid; O=elYMO7zig8J6mIbPbBmFSbY2Nha; B=bkFNO7zga1Wjyd1Wjmm1Wjdn1Wjpp1Wjmq1Wjdaa; P=ncZMO7zESK6fafodagubageaagaaiggaagaaigeaagTOLDafIfafqaagQgagiaafybafmaafGaagaaigiaafseagaaigKaafmaafaaifKaafyaafmaagqbafoaafiaageaag; A=d8TJO7z3Q642idGUYSNba; C=oBUNO7zi7PIVBddzemM35RGc; M=mTINO7zQb8MLNcqeG5baaaaaaaaaHeaeTGbaayuaaaaa9caaaca7dqaaaaaaaaaaa1AaaaaaSAqaaaaaaaaaaafaqaaaaaaaaaaawhaaaaanqqfTGbaaaaaaaaagjqeTGbaaaaaaaaaDkaaacaEbqfTGbaaaaaaaaaCkqeTGbcaaaaaaaafaaaaaaiaqaaaaaaaaaaaEfaaaaafaaaaaaJfqaaaajaqaaaaaaaaaaawbaaaaaVbaaaaadlaaaaaraaaacaGqadTGbgaCaaaaaabIbaaaaaioaaaaapzacTGbcaYDaaaaaolaaaaa8aaaaaa; AWSELB=BF05B5630623DD1E8B996279338DF20BEF5575447ACDA6BF522F570A1274578FD5B02DB008E0FE8BBB3A5C2D6A57FBA5167A33A670E11648C6F8EE97A4310711622D4F820C' }
+target:
+http://nana10.checkm8.com
+reqUrl: xhr_streaming
+headers: { host: '192.118.82.227',
+  'proxy-connection': 'keep-alive',
+  'content-length': '0',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2',
+  cookie: 'JSESSIONID=dummy' }
+target:
+http://192.118.82.227
+reqUrl: ping
+headers: { host: 'ping.chartbeat.net',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: 'image/webp,image/*,*/*;q=0.8',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://ping.chartbeat.net
+reqUrl: media_w289420529_b1327968_2.ts
+headers: { host: '62.90.90.39',
+  'proxy-connection': 'keep-alive',
+  'x-requested-with': 'ShockwaveFlash/24.0.0.186',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate, sdch',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2' }
+target:
+http://62.90.90.39
+reqUrl: xhr_send
+headers: { host: '192.118.82.227',
+  'proxy-connection': 'keep-alive',
+  'content-length': '82',
+  origin: 'http://vod.walla.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36',
+  'content-type': 'text/plain;charset=UTF-8',
+  accept: '*/*',
+  referer: 'http://vod.walla.co.il/movie/2878432',
+  'accept-encoding': 'gzip, deflate',
+  'accept-language': 'en-US,en;q=0.8,he;q=0.6,ru;q=0.4,de;q=0.2,zh;q=0.2',
+  cookie: 'JSESSIONID=dummy' }
+target:
+http://192.118.82.227
+reqUrl: liveView.php
+headers: { host: 'live.sekindo.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94',
+  accept: '*/*',
+  referer: 'http://10tv.nana10.co.il/Category/?CategoryID=600313',
+  'accept-encoding': 'gzip, deflate, lzma, sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  cookie: 'v6151573=0; csuuid=586fc38518a2a; csuuidts=0' }
+target:
+http://live.sekindo.com
+reqUrl: liveView.php
+headers: { host: 'live.sekindo.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94',
+  accept: '*/*',
+  referer: 'http://10tv.nana10.co.il/Category/?CategoryID=600313',
+  'accept-encoding': 'gzip, deflate, lzma, sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  cookie: 'v6151573=0; csuuid=586fc38518a2a; csuuidts=0' }
+target:
+http://live.sekindo.com
+reqUrl: jpt
+headers: { host: 'ib.adnxs.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94',
+  accept: '*/*',
+  referer: 'http://10tv.nana10.co.il/Category/?CategoryID=600313',
+  'accept-encoding': 'gzip, deflate, lzma, sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  cookie: 'icu=ChII9N4yEAoYGiAaKBowpcO_wwUQpcO_wwUYGQ..; anj=dTM7k!M41$DYRWSF\']wIg2HbXuXOUan7w(31@5)OMnKnzO=`7r1:Tfi2sswlk6m`m)NKirZw8EOg3rF/%HY1^KnV0o>Swfiu+is6D)HILPqfGSif2L.%QJ+$fB>xNfVH%.4qi]i$e*Aah<Rr*hYf+lg><NC5OF9y\'5?tf*u+(COsH`E.g3Vs]=>!0; sess=1; uuid2=8362514845053994578' }
+target:
+http://ib.adnxs.com
+reqUrl: tag
+headers: { host: 'bid.contextweb.com',
+  'proxy-connection': 'keep-alive',
+  origin: 'http://10tv.nana10.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94',
+  'content-type': 'text/plain',
+  accept: '*/*',
+  referer: 'http://10tv.nana10.co.il/Category/?CategoryID=600313',
+  'accept-encoding': 'gzip, deflate, lzma, sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  cookie: 'wf=0; pb_rtb_ev=3-dmz|7LF.0.1|0.0.a6885870-c388-4000-b865-1fa175f1e5b7; V=Qgec3lrnhDEx; vf=26' }
+target:
+http://bid.contextweb.com
+reqUrl: ADTECH;cors=yes;cmd=bid;alias=pbSekindo_55205586fe25594ef71;grp=116;misc=1483727445671
+headers: { host: 'adserver.adtechus.com',
+  'proxy-connection': 'keep-alive',
+  accept: 'application/json, text/javascript, */*; q=0.01',
+  origin: 'http://10tv.nana10.co.il',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94',
+  referer: 'http://10tv.nana10.co.il/Category/?CategoryID=600313',
+  'accept-encoding': 'gzip, deflate, lzma, sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  cookie: 'CfP=1; JEB2=586FBF136E651744CEF78E1AF0046060' }
+target:
+http://adserver.adtechus.com
+reqUrl: ajs.php
+headers: { host: 'cas.criteo.com',
+  'proxy-connection': 'keep-alive',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94',
+  accept: '*/*',
+  referer: 'http://10tv.nana10.co.il/Category/?CategoryID=600313',
+  'accept-encoding': 'gzip, deflate, lzma, sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  cookie: 'uid=e5d50260-d4a9-4559-a30a-6cfb9ab6cf21; eid=*16M5Yqhi7sQ9sn8s98WKa0feBsM0JLVncANewLK7jGtm1OVdWfw0hRocd5EgG%2blcNvn%2brMTOphUcO46iSLJOoyhAtVSIXNhZsoxkW6%2fyRqc6GHaWTTTR9HplmOWfljbIHVR8yfJ7wAa95Be0l30pZ8Itf%2flBzaVdf73bqqAm9B7SXUpP4ejQo4pYm3HXsntcL6YZmElwe%2bh6vNfhdnpBV5polFRcCXplKbWG0VO88SAI%3d; zdi=*1GVpmO7956pi3lRic6V4Weg%3d%3d' }
+target:
+http://cas.criteo.com

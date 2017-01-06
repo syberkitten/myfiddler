@@ -21,6 +21,13 @@
   },
   "homepage": "https://github.com/kostasx/node-proxy-filter",
   "dependencies": {
+    "colors": "*",
+    "connect": "*",
+    "http-proxy": "*",
+    "serve-static": "*",
+    "util": "*"
+  },
+  "Olddependencies": {
     "colors": "^1.0.3",
     "connect": "^3.3.4",
     "http-proxy": "^1.8.1",

@@ -20,7 +20,7 @@
 
   // CONFIGURATION
 
-  var localPort  = 9000;
+  var localPort  = 9001;
   var localhost  = "http://localhost:" + localPort + "/";
   var proxy      = httpProxy.createProxyServer({});
   var currentDir = process.cwd();
@@ -51,16 +51,24 @@
     var reqUrl = path.basename(req.url).split("?");
         reqUrl = reqUrl[0];
 
-    if ( process.argv.length < 3 ){
+    var headers = req.headers;
+    var userAgent = headers['user-agent'];
+
+    console.log('reqUrl:',reqUrl.cyan);
+    console.log('headers:',headers);
+    /*if ( process.argv.length < 3 ){
 
       files = fs.readdirSync(currentDir);
 
     }
+    console.log('files:',files)
+    */
+    var matches = reqUrl.match(/\.mp4/gi);
+    if (matches && matches.length == 1) {
 
-    if ( files.indexOf(reqUrl) > -1 ){
-
-      console.log("Filename matched: " + reqUrl );
-      req.url = localhost + reqUrl;
+      util.puts("matched mp4: " + reqUrl.cyan.bold,' replacing with default'.green );
+      //req.url = localhost + reqUrl;
+      req.url = localhost + "SampleVideo_1280x720_1mb.mp4";
       target  = localhost;
 
     } else {
@@ -68,6 +76,10 @@
       target = 'http://' + req.headers.host;
 
     }
+
+    util.puts('target:',target.yellow)
+    // todo remove this favor for above match
+    //target = 'http://' + req.headers.host;
 
     proxy.web( req, res, { target: target }); 
 
@@ -80,7 +92,7 @@
   /*====== STATIC SERVER : SERVING REPLACEMENT FILES ======*/
 
   var app        = connect();
-      app.use(serveStatic(currentDir));
+      app.use(serveStatic(currentDir+"/static/"));
 
   http.createServer(app).listen( localPort, function(){
 
