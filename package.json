@@ -2,9 +2,26 @@
   "name": "myfiddler",
   "version": "0.1.2",
   "description": "A Node.JS proxy server for injecting local resources on remote websites",
-  "main": "index.js",
+  "main": "nw_start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "window": {
+    "title": "node-webkit demo",
+    "icon": "link.png",
+    "toolbar": true,
+    "frame": false,
+    "width": 800,
+    "height": 500,
+    "position": "mouse",
+    "min_width": 400,
+    "min_height": 200,
+    "max_width": 800,
+    "max_height": 600
+  },
+  "chromium-args": "--enable-logging=stderr",
+  "webkit": {
+    "plugin": true
   },
   "repository": {
     "type": "git",
@@ -14,7 +31,7 @@
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "nproxy": "./bin/myfiddle"
+    "myfiddle": "./bin/myfiddle"
   },
   "bugs": {
     "url": "https://github.com/kostasx/node-proxy-filter/issues"
@@ -24,8 +41,11 @@
     "colors": "*",
     "connect": "*",
     "http-proxy": "*",
+    "replacestream": "^4.0.2",
     "serve-static": "*",
-    "util": "*"
+    "transformer-proxy": "^0.3.3",
+    "util": "*",
+    "zlib": "^1.0.5"
   },
   "Olddependencies": {
     "colors": "^1.0.3",

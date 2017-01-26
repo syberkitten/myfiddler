@@ -30,21 +30,19 @@
 
   /*====== CREATE FILE REPLACEMENT LIST ======*/
 
+  proxy.init(staticServerPort,proxyPort);
+  log('starting proxy server')
+
+
   if ( process.argv.length > 2 ){
 
     // PRODUCE FILE REPLACEMENT LIST FROM COMMAND LINE ARGUMENTS
+/*
     var args = process.argv.slice(2);
     process.argv.slice(2).forEach(function (fileName) {
       files.push( fileName );
     });
-
-    if (args.indexOf('start')>-1) {
-      log('starting server');
-
-      proxy.init(staticServerPort,proxyPort);
-    } else {
-      log('unknown command!');
-    }
+*/
 
 
   } else {
@@ -52,6 +50,13 @@
     // PRODUCE FILE REPLACEMENT LIST FROM CURRENT DIR
     files = fs.readdirSync(currentDir);
 
+  }
+
+
+  module.exports = {
+    close:function() {
+      proxy.close();
+    }
   }
 
 
