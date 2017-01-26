@@ -11,41 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
 
-    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="style.css" >
 
-    <script>
-        // Create an empty context menu
-        var menu = new nw.Menu();
-        var version = require('../package.json').version;
-        console.log('WebKit Started, version:',version);
-        // Add some items with label
-        menu.append(new nw.MenuItem({
-            label: 'Item A',
-            click: function(){
-                alert('You have clicked at "Item A"');
-            }
-        }));
-        menu.append(new nw.MenuItem({ label: 'Item B' }));
-        menu.append(new nw.MenuItem({ type: 'separator' }));
-        menu.append(new nw.MenuItem({ label: 'Item C' }));
-
-        // Hooks the "contextmenu" event
-        document.body.addEventListener('contextmenu', function(ev) {
-            // Prevent showing default context menu
-            ev.preventDefault();
-            // Popup the native context menu at place you click
-            menu.popup(ev.x, ev.y);
-            console.log('we are here in the center of town loock!')
-
-            return false;
-        }, false);
-
-
-        const proxy = require('../proxy_starter');
-
-
-
-    </script>
 </head>
 <body>
 <nav class="navbar navbar-fixed-top navbar-dark navbar-inverse">
@@ -137,6 +104,41 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="libs/jquery.min.js"><\/script>')</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script>
+    // Create an empty context menu
+    var menu = new nw.Menu();
+    var version = require('../package.json').version;
+    console.log('WebKit Started, version:',version);
+    // Add some items with label
+    menu.append(new nw.MenuItem({
+        label: 'Welcome To MyFiddler, Version:'+version
+    }));
+    menu.append(new nw.MenuItem({
+        label: 'Item A',
+        click: function(){
+            alert('You have clicked at "Item A"');
+        }
+    }));
+    menu.append(new nw.MenuItem({ label: 'Item B' }));
+    menu.append(new nw.MenuItem({ type: 'separator' }));
+    menu.append(new nw.MenuItem({ label: 'Item C' }));
 
+    // Hooks the "contextmenu" event
+    document.body.addEventListener('contextmenu', function(ev) {
+        // Prevent showing default context menu
+        ev.preventDefault();
+        // Popup the native context menu at place you click
+        menu.popup(ev.x, ev.y);
+        console.log('we are here in the center of town loock!')
+
+        return false;
+    }, false);
+
+
+    const proxy = require('../proxy_starter');
+
+
+
+</script>
 </body>
 </html>
