@@ -1,44 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Context Menu</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hello World!</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+
+    <link rel="stylesheet" href="css/style.css" >
+
+    <script>
+        // Create an empty context menu
+        var menu = new nw.Menu();
+        var version = require('../package.json').version;
+        console.log('WebKit Started, version:',version);
+        // Add some items with label
+        menu.append(new nw.MenuItem({
+            label: 'Item A',
+            click: function(){
+                alert('You have clicked at "Item A"');
+            }
+        }));
+        menu.append(new nw.MenuItem({ label: 'Item B' }));
+        menu.append(new nw.MenuItem({ type: 'separator' }));
+        menu.append(new nw.MenuItem({ label: 'Item C' }));
+
+        // Hooks the "contextmenu" event
+        document.body.addEventListener('contextmenu', function(ev) {
+            // Prevent showing default context menu
+            ev.preventDefault();
+            // Popup the native context menu at place you click
+            menu.popup(ev.x, ev.y);
+            console.log('we are here in the center of town loock!')
+
+            return false;
+        }, false);
+
+
+        const proxy = require('../proxy_starter');
+
+
+
+    </script>
 </head>
-<body style="width: 100%; height: 100%;">
+<body>
+<nav class="navbar navbar-fixed-top navbar-dark navbar-inverse">
+    <a class="navbar-brand" href="#">Project name</a>
+    <ul class="nav navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+        </li>
+    </ul>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 sidebar">
+            <table class="table">
+                <thead>
+                <th>#</th>
+                <th>Result</th>
+                <th>Protocol</th>
+                <th>Host</th>
+                <th>Url</th>
+                </thead>
+                <tbody id="events">
 
-<p>'Right click' to show context menu.</p>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6 col-md-offset-6 main">
+            <div class="container-fluid">
+                <div class="row">
+                    <form id="requestDetails">
+                        <ul class="nav nav-tabs" id="requestDetailsTabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#requestDetails-headers-tab-content" id="requestDetails-headers-tab" role="tab" data-toggle="tab" aria-controls="requestDetails-headers-tab-content" aria-expanded="true">Headers</a></li>
+                            <li role="presentation" ><a href="#requestDetails-content-tab-content" id="requestDetails-content-tab" role="tab" data-toggle="tab" aria-controls="requestDetails-content-tab-content" aria-expanded="true">Content</a></li>
+                        </ul>
+                        <div class="tab-content" id="requestDetailsTabContent">
+                            <div class="tab-pane fade active in" role="tabpanel" id="requestDetails-headers-tab-content" aria-labelledby="requestDetails-headers-tab">
+                                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+                                    Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+                                    Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip
+                                    quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            </div>
+                            <div class="tab-pane fade" role="tabpanel" id="requestDetails-content-tab-content" aria-labelledby="equestDetails-content-tab">
+                                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit,
+                                    blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth
+                                    letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic,
+                                    assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore
+                                    stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry
+                                    richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo
+                                    park.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <form id="responseDetails">
+                        <ul class="nav nav-tabs" id="responseDetailsTabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#responseDetails-headers-tab-content" id="responseDetails-headers-tab" role="tab" data-toggle="tab" aria-controls="requestDetails-headers-tab-content" aria-expanded="true">Headers</a></li>
+                            <li role="presentation" ><a href="#responseDetails-content-tab-content" id="responseDetails-content-tab" role="tab" data-toggle="tab" aria-controls="requestDetails-content-tab-content" aria-expanded="true">Content</a></li>
+                        </ul>
+                        <div class="tab-content" id="responseDetailsTabContent">
+                            <div class="tab-pane fade active in" role="tabpanel" id="responseDetails-headers-tab-content" aria-labelledby="responseDetails-headers-tab">
+                                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+                                    Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+                                    Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip
+                                    quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            </div>
+                            <div class="tab-pane fade" role="tabpanel" id="responseDetails-content-tab-content" aria-labelledby="equestDetails-content-tab">
+                                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit,
+                                    blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth
+                                    letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic,
+                                    assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore
+                                    stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry
+                                    richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo
+                                    park.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="libs/jquery.min.js"><\/script>')</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<script>
-    // Create an empty context menu
-    var menu = new nw.Menu();
-    var version = require('../package.json').version;
-    console.log('WebKit Started, version:',version);
-    // Add some items with label
-    menu.append(new nw.MenuItem({
-        label: 'Item A',
-        click: function(){
-            alert('You have clicked at "Item A"');
-        }
-    }));
-    menu.append(new nw.MenuItem({ label: 'Item B' }));
-    menu.append(new nw.MenuItem({ type: 'separator' }));
-    menu.append(new nw.MenuItem({ label: 'Item C' }));
-
-    // Hooks the "contextmenu" event
-    document.body.addEventListener('contextmenu', function(ev) {
-        // Prevent showing default context menu
-        ev.preventDefault();
-        // Popup the native context menu at place you click
-        menu.popup(ev.x, ev.y);
-        console.log('we are here in the center of town loock!')
-
-        return false;
-    }, false);
-
-
-    const proxy = require('../proxy_starter');
-
-
-
-</script>
 </body>
 </html>
