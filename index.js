@@ -1,1 +1,1 @@
-module.exports = require('./nproxy.js');
+module.exports = require('./fiddle.js');
