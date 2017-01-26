@@ -1,5 +1,5 @@
 {
-  "name": "node-proxy-filter",
+  "name": "myfiddler",
   "version": "0.1.2",
   "description": "A Node.JS proxy server for injecting local resources on remote websites",
   "main": "index.js",
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kostasx/node-proxy-filter.git"
+    "url": "https://github.com/kostasx/myfiddler.git"
   },
-  "author": "KostasX",
+  "author": "Liam Bilich",
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "nproxy": "./bin/nproxy"
+    "nproxy": "./bin/myfiddle"
   },
   "bugs": {
     "url": "https://github.com/kostasx/node-proxy-filter/issues"
