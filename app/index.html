@@ -110,7 +110,7 @@
     var version = require('../package.json').version;
     console.log('WebKit Started, version:',version);
     // Add some items with label
-    menu.append(new nw.MenuItem({
+    /*menu.append(new nw.MenuItem({
         label: 'Welcome To MyFiddler, Version:'+version
     }));
     menu.append(new nw.MenuItem({
@@ -133,9 +133,17 @@
 
         return false;
     }, false);
+     */
 
-
-    const proxy = require('../proxy_starter');
+    const proxyModule = require('../proxy_starter');
+    proxyModule.init().then(function(proxyApp){
+        //return;
+       proxyApp.use(function(req,res,next){
+          console.log('Got Response:',res)
+          console.log('Got Response Headers:',res.headers);
+           next();
+       });
+    });
 
 
 

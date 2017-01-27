@@ -21,7 +21,7 @@
 
 
 
-  const proxy = require('./lib/proxy');
+  var proxyModule = require('./lib/proxy');
 
 
   function log() {
@@ -30,33 +30,38 @@
 
   /*====== CREATE FILE REPLACEMENT LIST ======*/
 
-  proxy.init(staticServerPort,proxyPort);
-  log('starting proxy server')
+  //const proxy = proxyModule.init(staticServerPort,proxyPort);
+  //log('starting proxyModule server')
 
 
   if ( process.argv.length > 2 ){
 
     // PRODUCE FILE REPLACEMENT LIST FROM COMMAND LINE ARGUMENTS
-/*
-    var args = process.argv.slice(2);
-    process.argv.slice(2).forEach(function (fileName) {
-      files.push( fileName );
-    });
-*/
-
+      var proxy = proxyModule.init(staticServerPort,proxyPort);
 
   } else {
 
     // PRODUCE FILE REPLACEMENT LIST FROM CURRENT DIR
-    files = fs.readdirSync(currentDir);
+    //files = fs.readdirSync(currentDir);
 
   }
 
 
   module.exports = {
-    close:function() {
-      proxy.close();
-    }
+      init: function () {
+          return new Promise((resolve, reject) => {
+              log('starting proxyModule server')
+              var proxy = proxyModule.init(staticServerPort,proxyPort).then((proxyApp)=>{
+                  //if (err) {
+                  //    return reject(e);
+                  //} else {
+                      return resolve(proxyApp);
+                  //}
+              });
+
+          });
+
+      }
   }
 
 
