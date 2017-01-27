@@ -29,8 +29,11 @@
   }
 
   /*====== CREATE FILE REPLACEMENT LIST ======*/
-
-  proxy.init(staticServerPort,proxyPort);
+  var onData = function(data){
+    console.log(`on data url ${data.request.url} ${data.request.headers}`);
+  }
+  proxy.init(staticServerPort,proxyPort,onData);
+  
   log('starting proxy server')
 
 
@@ -56,6 +59,9 @@
   module.exports = {
     close:function() {
       proxy.close();
+    },
+    setDataCB:function(dataCB){
+      proxy.setOndataCB(dataCB);
     }
   }
 

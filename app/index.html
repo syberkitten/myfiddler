@@ -41,7 +41,7 @@
                 <th>Url</th>
                 </thead>
                 <tbody id="events">
-
+                    
                 </tbody>
             </table>
         </div>
@@ -136,7 +136,21 @@
 
 
     const proxy = require('../proxy_starter');
+    var index=0;
+    proxy.setDataCB(function(data){
+        //console.log(`!!! on data url ${data.request.url} ${JSON.stringify(data.request.headers)}`);
+        const rowTemplate = `<td>${index}</td>
+                    <td>NONE</td>
+                    <td>NONE</td>
+                    <td>${data.request.headers.host}</td>
+                    <td>${data.request.url}</td>`
+        var elem = document.getElementById('events');
+        elem.innerHTML+=rowTemplate;
+        elem.scrollIntoView(false);
 
+        // $('#events').append(rowTemplate);
+        index++;
+    });
 
 
 </script>
