@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <title>Finch</title>
+
+    <script>document.querySelector("html").className = "html--" + process.platform;</script>
+    <link type="text/css" rel="stylesheet" href="assets/dest/css/main.css" />
+
+</head>
+<body>
+
+<div id="view"></div>
+
+<script>
+
+    if (!process.env.NODE_ENV) {
+        process.env.NODE_ENV = "production";
+    }
+
+    var Bootstrap = require("./lib/Bootstrap");
+
+    // without these React blows up
+    global.document = window.document;
+    global.navigator = window.navigator;
+
+    var React = require("react");
+    var Wrapper = require("./components/Wrapper");
+
+    // we have to set up some initial state before calling
+    // React.render otherwise we get a race condition around
+    // network connectivity
+    Bootstrap.load();
+
+    React.render(
+            React.createElement(Wrapper),
+            document.getElementById("view")
+    );
+
+    var m = require('mustache');
+    console.log('m:',m)
+
+</script>
+
+</body>
+</html>

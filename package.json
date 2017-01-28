@@ -7,17 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "window": {
-    "title": "node-webkit demo",
+    "title": "MyFiddler",
     "icon": "link.png",
-    "toolbar": true,
-    "frame": true,
+    "toolbar": false,
+    "frame": false,
     "width": 1024,
     "height": 768,
     "position": "mouse",
-    "min_width": 400,
-    "min_height": 200,
-    "max_width": 800,
-    "max_height": 600
+    "min_width": 800,
+    "min_height": 600,
+    "max_width": 10000,
+    "max_height": 10000
   },
   "chromium-args": "--enable-logging=stderr",
   "webkit": {
@@ -41,6 +41,7 @@
     "colors": "*",
     "connect": "*",
     "http-proxy": "*",
+    "mustache": "^2.3.0",
     "replacestream": "^4.0.2",
     "serve-static": "*",
     "transformer-proxy": "^0.3.3",

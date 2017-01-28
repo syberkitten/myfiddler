@@ -15,6 +15,18 @@
 
 </head>
 <body>
+
+<script id="events_template" type="x-tmpl-mustache">
+    <tr>
+        <td>{{index}}</td>
+        <td>{{accept}}</td>
+        <td>{{origin}}</td>
+        <td>{{host}}</td>
+        <td>{{referer}}</td>
+    </tr>
+</script>
+
+
 <nav class="navbar navbar-fixed-top navbar-dark navbar-inverse">
     <a class="navbar-brand" href="#">Project name</a>
     <ul class="nav navbar-nav">
@@ -35,10 +47,10 @@
             <table class="table">
                 <thead>
                 <th>#</th>
-                <th>Result</th>
-                <th>Protocol</th>
+                <th>Accept</th>
+                <th>Origin</th>
                 <th>Host</th>
-                <th>Url</th>
+                <th>Referer</th>
                 </thead>
                 <tbody id="events">
 
@@ -101,10 +113,68 @@
         </div>
     </div>
 </div>
+<!--
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="libs/jquery.min.js"><\/script>')</script>
+-->
+<!--
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+-->
+
+<script src="./libs/jquery.min.js"></script>
+<script src="./libs/bootstrap.min.js"></script>
 <script>
+
+
+    var totalEvents = 0;
+    const Mustache = require('mustache');
+
+    function renderEvents(data){
+
+        var rendered = Mustache.render(events_template, data);
+        $('#events').html(rendered);
+    }
+
+
+
+    const wire = require('../lib/wire');
+    console.log('wire:',wire);
+    wire.getRequest(function(req,res){
+        console.log('REQ h:',req.headers);
+        console.log('RES h:',res.headers);
+        return;
+        renderEvents({
+            accept:res.headers['accept'] || "",
+            origin:res.headers['origin'] || "",
+            host:res.headers.host || "",
+            referer:res.headers.referer || ""
+        })
+
+
+    })
+
+    // http://stackoverflow.com/questions/35281666/loading-bootstrap-in-nw-js-node-webkit-app-with-pure-npm-build
+    // prepare mustache and make it fast.
+    var events_template = $('#events_template').html();
+    Mustache.parse(events_template);   // optional, speeds up future uses
+
+
+
+    var dSamp = {
+        index:totalEvents,
+        status:"200",
+        protocol:"http"
+    }
+
+    renderEvents(dSamp)
+
+    //window.jQuery = $ = require('jquery');
+    //require('bootstrap');
+
+
+
+
+
     // Create an empty context menu
     var menu = new nw.Menu();
     var version = require('../package.json').version;
@@ -137,13 +207,17 @@
 
     const proxyModule = require('../proxy_starter');
     proxyModule.init().then(function(proxyApp){
-        //return;
+        return;
+        console.log('We are here, proxyApp:',proxyApp);
        proxyApp.use(function(req,res,next){
-          console.log('Got Response:',res)
-          console.log('Got Response Headers:',res.headers);
+           console.log('God is here');
+          console.log('Got Response:',res);
+          //console.log('Got Response Headers:',res.headers);
            next();
        });
     });
+
+
 
 
 
