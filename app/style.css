@@ -22,3 +22,6 @@ body{
 td {
     overflow-x:auto;
 }
+#events tr{
+    cursor: pointer;
+}

@@ -17,13 +17,21 @@
 <body>
 
 <script id="events_template" type="x-tmpl-mustache">
-    <tr>
+    <tr onmousedown="displayData({{index}});">
         <td>{{index}}</td>
         <td>{{accept}}</td>
         <td>{{origin}}</td>
         <td>{{host}}</td>
         <td>{{referer}}</td>
     </tr>
+</script>
+<script id="headers_template" type="x-tmpl-mustache">
+    {{#headers}}
+        <tr>
+            <td>{{key}}</td>
+            <td>{{value}}</td>
+        </tr>
+    {{/headers}}
 </script>
 
 
@@ -44,7 +52,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6 sidebar">
-            <table class="table">
+            <table class="table table-striped">
                 <thead>
                 <th>#</th>
                 <th>Accept</th>
@@ -67,10 +75,17 @@
                         </ul>
                         <div class="tab-content" id="requestDetailsTabContent">
                             <div class="tab-pane fade active in" role="tabpanel" id="requestDetails-headers-tab-content" aria-labelledby="requestDetails-headers-tab">
-                                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.
-                                    Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
-                                    Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip
-                                    quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Key</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="requestDetailsHeaders">
+                                        
+                                    </tbody>
+                                </table>
                             </div>
                             <div class="tab-pane fade" role="tabpanel" id="requestDetails-content-tab-content" aria-labelledby="equestDetails-content-tab">
                                 <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit,
@@ -116,26 +131,30 @@
 <script src="./libs/jquery.min.js"></script>
 <script src="./libs/bootstrap.min.js"></script>
 <script>
-
-
-    var totalEvents = 0;
-    const Mustache = require('mustache');
-
-    function renderEvents(data){
-
-        var rendered = Mustache.render(events_template, data);
-
-        var closest_row = $('#events > tr:last').closest('tr');
-        if (closest_row.length==0) {
-            closest_row = $('#events');
-            $(rendered).insertAfter(closest_row);
-        } else {
-            $('#events').html(rendered);
+    const ObservableArray = require('observable-array');
+    var events = ObservableArray();
+    events.on('change', function (event) {
+        //added
+        if(event.type === "push"){
+            //console.log(JSON.stringify(event));
+            renderEvents(event.values[0]);       
         }
+    });
 
-
+    const Mustache = require('mustache');
+    function displayData(index){
+        var event = events[index];
+        renderRequestHeaders(event.headers);
     }
-
+    function renderEvents(data){
+        var rendered = Mustache.render(events_template, data);
+        $('#events').prepend(rendered);
+    }
+    function renderRequestHeaders(headers){
+        var data = {headers:Object.keys(headers).map(function(item){return {key:item,value:headers[item]}})};
+        var rendered = Mustache.render(headers_template, data);
+        $('#requestDetailsHeaders').html(rendered);
+    }
 
 
     const wire = require('../lib/wire');
@@ -143,19 +162,20 @@
     wire.getRequest(function(req,res){
         console.log('REQ h:',req.headers);
         console.log('RES h:',res.headers);
-        renderEvents({
+        events.push({
+            index:events.length,
             accept:req.headers['accept'] || "",
             origin:req.headers['origin'] || "",
             host:req.headers.host || "",
-            referer:req.headers.referer || ""
-        })
-
-
+            referer:req.headers.referer || "",
+            headers:req.headers || {}
+        });
     })
 
     // http://stackoverflow.com/questions/35281666/loading-bootstrap-in-nw-js-node-webkit-app-with-pure-npm-build
     // prepare mustache and make it fast.
     var events_template = $('#events_template').html();
+    var headers_template = $('#headers_template').html();
     Mustache.parse(events_template);   // optional, speeds up future uses
 
 

@@ -48,7 +48,8 @@
     "serve-static": "*",
     "transformer-proxy": "^0.3.3",
     "util": "*",
-    "zlib": "^1.0.5"
+    "zlib": "^1.0.5",
+    "observable-array": "0.0.4"
   },
   "Olddependencies": {
     "colors": "^1.0.3",
