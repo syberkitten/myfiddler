@@ -113,14 +113,6 @@
         </div>
     </div>
 </div>
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="libs/jquery.min.js"><\/script>')</script>
--->
-<!--
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
--->
-
 <script src="./libs/jquery.min.js"></script>
 <script src="./libs/bootstrap.min.js"></script>
 <script>
@@ -132,7 +124,16 @@
     function renderEvents(data){
 
         var rendered = Mustache.render(events_template, data);
-        $('#events').html(rendered);
+
+        var closest_row = $('#events > tr:last').closest('tr');
+        if (closest_row.length==0) {
+            closest_row = $('#events');
+            $(rendered).insertAfter(closest_row);
+        } else {
+            $('#events').html(rendered);
+        }
+
+
     }
 
 
@@ -142,12 +143,11 @@
     wire.getRequest(function(req,res){
         console.log('REQ h:',req.headers);
         console.log('RES h:',res.headers);
-        return;
         renderEvents({
-            accept:res.headers['accept'] || "",
-            origin:res.headers['origin'] || "",
-            host:res.headers.host || "",
-            referer:res.headers.referer || ""
+            accept:req.headers['accept'] || "",
+            origin:req.headers['origin'] || "",
+            host:req.headers.host || "",
+            referer:req.headers.referer || ""
         })
 
 
@@ -160,25 +160,11 @@
 
 
 
-    var dSamp = {
-        index:totalEvents,
-        status:"200",
-        protocol:"http"
-    }
-
-    renderEvents(dSamp)
-
-    //window.jQuery = $ = require('jquery');
-    //require('bootstrap');
-
-
-
-
-
     // Create an empty context menu
     var menu = new nw.Menu();
     var version = require('../package.json').version;
     console.log('WebKit Started, version:',version);
+
     // Add some items with label
     /*menu.append(new nw.MenuItem({
         label: 'Welcome To MyFiddler, Version:'+version
